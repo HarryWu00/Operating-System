@@ -7,34 +7,36 @@ function App(n,mb,s){
 
     //Declare the instance function open here.
     this.open = function(){
-      state = active
+    this.state = active
       };
     //Declare the instance function sleep here.
 this.sleep = function(){
-  if (state = active){
-    state = sleep;
-    mb = 1/2*this.memory;
+  if (this.state = active){
+    this.state = sleep;
+    this.memory = 1/2*this.memory;
   }
 }
 
     //Declare the instance function active here.
 this.active = function(){
-  if (state = sleep){
-    new states = active;
-    new mb = 2*this.memory;
+  if (this.state = sleep){
+  this.states = active;
+  this.memory= 2*this.memory;
   }
 }
 
     //Declare the instance function close here.
 this.close = function(){
-
+  if (this.state != null){
+    this.states = null
+    this.memory = 0
+  }
 }
-
-
-
 }
-
 //Use the constructor to create 4 App objects below.
+var myApp = new App ("Showbie",76,active);
+var herapp = new App ("iBooks", 2100,sleep);
+var yourapp = new App ("C",16,null);
 
 
 
